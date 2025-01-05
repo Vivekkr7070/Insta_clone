@@ -90,7 +90,7 @@ io.on('connection', (socket) => {
 });
 
 
-aapp.get("/test", (req, res) => {
+app.get("/test", (req, res) => {
     res.status(200).json({ message: "Server is working fine" });
 });
 
