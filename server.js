@@ -89,9 +89,10 @@ io.on('connection', (socket) => {
     });
 });
 
-app.get("/test",(req,res)=>{
-    res.send("ok tested")
-})
+
+aapp.get("/test", (req, res) => {
+    res.status(200).json({ message: "Server is working fine" });
+});
 
 // Start the server and listen on the specified port
 server.listen(PORT, () => {
