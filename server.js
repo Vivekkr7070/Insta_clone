@@ -89,6 +89,10 @@ io.on('connection', (socket) => {
     });
 });
 
+app.get("/test",(req,res)=>{
+    res.send("ok tested")
+})
+
 // Start the server and listen on the specified port
 server.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
