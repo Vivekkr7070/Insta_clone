@@ -26,7 +26,9 @@ const baseUrl = 'http://localhost:6001'
 exports.createPost = async (req, res) => {
     try {
         const { title, content } = req.body;
-
+        console.log("🚀 ~ exports.createPost= ~ content:", content)
+        console.log("🚀 ~ exports.createPost= ~ title:", title)
+        
         // Validate input fields
         if (!title || !content) {
             return res.status(400).json({ message: 'Title and content are required' });
@@ -72,7 +74,6 @@ exports.getPosts = async (req, res) => {
         if (!posts || posts.length === 0) {
             return res.status(404).json({ message: 'No posts found' });
         }
-
         // Return posts with imageUrl included
         res.status(200).json({ message: 'Posts retrieved successfully', posts });
     } catch (error) {
